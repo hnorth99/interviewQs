@@ -12,7 +12,7 @@ class Solution {
         int startVal = l1.val + l2.val;
         ListNode retval = new ListNode(startVal % 10);
         
-        //Set pointers
+        //Set runners
         ListNode currR = retval;
         ListNode curr1 = l1.next;
         ListNode curr2 = l2.next;
@@ -32,7 +32,7 @@ class Solution {
             currR.next = new ListNode(val % 10);
             currR = currR.next;
             
-            //Prepare for next node
+            //Adjust switches and runners
             if (keep1) {
                 curr1 = curr1.next;
                 keep1 = curr1 != null;
